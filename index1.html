@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(to bottom, #f3e0e6, #e9c8d0);
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 3.5em;
+            margin-top: 20px;
+            color: #d94d5c;
+            animation: fadeIn 3s ease-out;
+        }
+        p {
+            font-size: 1.4em;
+            margin: 20px 0;
+            opacity: 0;
+            animation: fadeIn 3s 1s ease-out forwards;
+            color: #6a3d57;
+        }
+        button {
+            background-color: #f6b7b1;
+            border: none;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 1.2em;
+            padding: 10px 25px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+            font-family: 'Georgia', serif;
+        }
+        button:hover {
+            background-color: #f68c8f;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .balloons {
+            position: absolute;
+            bottom: 0;
+            height: 200px;
+            width: 100%;
+            overflow: hidden;
+        }
+        .balloon {
+            position: absolute;
+            bottom: 0;
+            width: 60px;
+            height: 80px;
+            background-color: #f6b7b1;
+            border-radius: 50% 50% 0 0;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            animation: float 6s ease-in-out infinite;
+        }
+        .balloon:nth-child(2) { background-color: #f3c6c9; left: 15%; animation-duration: 7s; }
+        .balloon:nth-child(3) { background-color: #e9b3b5; left: 35%; animation-duration: 8s; }
+        .balloon:nth-child(4) { background-color: #d4a4a7; left: 55%; animation-duration: 9s; }
+        .balloon:nth-child(5) { background-color: #e2b6b9; left: 75%; animation-duration: 10s; }
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-100vh);
+            }
+        }
+        .hearts {
+            position: absolute;
+            top: 10%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        .heart {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: #d94d5c;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            animation: beat 1.5s ease-in-out infinite;
+        }
+        .heart:nth-child(2) { width: 40px; height: 40px; animation-duration: 2s; left: 20%; top: 20%; }
+        .heart:nth-child(3) { width: 25px; height: 25px; animation-duration: 2.5s; left: 50%; top: 30%; }
+        .heart:nth-child(4) { width: 35px; height: 35px; animation-duration: 1.8s; left: 70%; top: 40%; }
+        @keyframes beat {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        .cake {
+            position: relative;
+            margin-top: 20px;
+            width: 200px;
+            height: 200px;
+            background: url('romantic-cake.png') no-repeat center center;
+            background-size: cover;
+            animation: bounceCake 2s infinite;
+        }
+        @keyframes bounceCake {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-15px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>🎉 Happy Birthday Cantikkkk! 🎉</h1>
+    <p> Ciee udah 23 tahun, semoga apa yang kamu usahain bener - bener terbayarkan yaa ditahun ini!</p>
+    <p> </p>
+    <div class="cake"></div>
+    <div class="balloons">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
+    <div class="hearts">
+        <!-- Generate heart elements with CSS -->
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+    </div>
+    <button onclick="window.location.href='index.html';">Here's ur gift !!</button>
+</body>
+</html>
